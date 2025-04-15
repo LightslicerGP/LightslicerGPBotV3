@@ -3,6 +3,7 @@ from discord.ext import commands
 import requests
 
 # done 9/30/24
+# to do, new options 4/15/25
 
 
 class Animal(commands.Cog):

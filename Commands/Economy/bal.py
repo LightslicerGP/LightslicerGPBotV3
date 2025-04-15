@@ -7,6 +7,8 @@ with open("config.json", "r") as config_file:
     token = config["token"]
     api_token = config["apiToken"]
 
+# TO DO 4/15/25
+
 class Bal(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

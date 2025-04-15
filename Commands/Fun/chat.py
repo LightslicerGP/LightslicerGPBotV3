@@ -3,6 +3,7 @@ from discord.ext import commands
 import requests
 
 # done 10/1/24
+# to do, check if it works 4/15/25
 
 api_token = 0
 

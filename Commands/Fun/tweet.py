@@ -4,6 +4,7 @@ import requests
 
 # 10/1/24 technically done, but api supports custom counts
 # and theme, add that as like --theme=dark or whatever idk
+# check for parity with the aoijs version 4/5/25
 
 
 class Tweet(commands.Cog):
