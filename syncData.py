@@ -41,7 +41,7 @@ def process(base_name):
                 file.write(modified_content)
     elif md_exists:
         print(f"{base_name}.md")
-        with io.open(f"{base_name}.md", "w", encoding="utf-8") as file:
+        with io.open(f"{base_name}.md", "r", encoding="utf-8") as file:
             content = file.read()
 
         if js_exists:
@@ -56,7 +56,7 @@ def process(base_name):
                 code = match.group(2)
                 after = match.group(3)
 
-                with io.open(f"{base_name}.js", "w", encoding="utf-8") as js_file:
+                with io.open(f"{base_name}.js", "r", encoding="utf-8") as js_file:
                     js_content = js_file.read()
 
                 new_code = js_content
@@ -79,7 +79,7 @@ def process(base_name):
                 code = match.group(2)
                 after = match.group(3)
 
-                with io.open(f"{base_name}.py", "w", encoding="utf-8") as py_file:
+                with io.open(f"{base_name}.py", "r", encoding="utf-8") as py_file:
                     py_content = py_file.read()
 
                 new_code = py_content
