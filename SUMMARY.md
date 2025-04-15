@@ -13,6 +13,7 @@
     * [#bal](commands/economy/bal.md)
     * [#daily](commands/economy/daily.md)
     * [#job apply](commands/economy/job-apply.md)
+    * [#job](commands/economy/command.md)
     * [#work](commands/economy/work.md)
   * [🎮 Fun](commands/fun/README.md)
     * [#animal](commands/fun/animal.md)
