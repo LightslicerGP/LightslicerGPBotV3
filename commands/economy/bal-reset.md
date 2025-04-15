@@ -66,3 +66,9 @@ module.exports = [
 
 ```
 {% endcode %}
+
+{% code title="Discord.py" lineNumbers="true" %}
+```python
+print("Hello World!")
+```
+{% endcode %}
