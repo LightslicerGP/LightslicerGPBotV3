@@ -21,6 +21,8 @@ This command is still in development!
 * \[option2] - required
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 console.log("Hello World!")
