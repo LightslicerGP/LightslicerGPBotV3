@@ -3,7 +3,7 @@ import os
 import io
 import re
 
-root_dir = "Commands"
+root_dir = "commands"
 
 prev_base_name = None
 js_exists = md_exists = py_exists = False
