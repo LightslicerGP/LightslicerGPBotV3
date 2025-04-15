@@ -17,7 +17,7 @@ This command is for admins only!
 * \[amount] - required
 {% endhint %}
 
-{% code lineNumbers="true" fullWidth="false" %}
+{% code lineNumbers="true" fullWidth="true" %}
 ```javascript
 module.exports = [
   // new from 10/5/24, done same day
