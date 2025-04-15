@@ -1,8 +1,8 @@
 ---
-description: Add to a user's balance
+description: Reset a user's balance
 ---
 
-# #bal add
+# #bal reset
 
 {% hint style="warning" %}
 This command is for admins only!
@@ -11,7 +11,7 @@ This command is for admins only!
 ## Usage
 
 {% hint style="success" %}
-\#bal add (user) \[amount]
+\#bal reset (user) \[amount]
 
 * (user) - optional
 * \[amount] - required
@@ -20,26 +20,26 @@ This command is for admins only!
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [
-  // new from 10/5/24, done same day
-  // note: can use negative numbers for #bal remove ig lol
+  // done 10/5/24
   {
-    name: "bal add",
+    name: "bal reset",
+    aliases: ["balreset"],
     code: `
       $clientTyping
       $reply[$messageID;true]
     
     
     
-      $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money;$mentioned[1];Bank];$noMentionMessage];$mentioned[1];Bank]
+      $setGlobalUserVar[Money;;$mentioned[1];Bank]
     
     
     
       $color[#80ff80]
       $title[
-        You have added $$noMentionMessage to $username[$mentioned[1]]'s money
+        You have reset $username[$mentioned[1]]'s money
       ]
       $description[
-        $username[$mentioned[1]] now has $$math[$getGlobalUserVar[Money;$mentioned[1];Bank]+$noMentionMessage]
+        $username[$mentioned[1]] orignally had $$numberSeparator[$getGlobalUserVar[Money;$mentioned[1];Bank]] 
       ]
     
     
@@ -58,7 +58,7 @@ module.exports = [
         }
         {reply:$messageID:true}
       ]
-      `,
+    `,
   },
 ];
 

@@ -1,8 +1,8 @@
 ---
-description: Add to a user's balance
+description: Set a user's balance
 ---
 
-# #bal add
+# #bal set
 
 {% hint style="warning" %}
 This command is for admins only!
@@ -11,7 +11,7 @@ This command is for admins only!
 ## Usage
 
 {% hint style="success" %}
-\#bal add (user) \[amount]
+\#bal set (user) \[amount]
 
 * (user) - optional
 * \[amount] - required
@@ -20,26 +20,25 @@ This command is for admins only!
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [
-  // new from 10/5/24, done same day
-  // note: can use negative numbers for #bal remove ig lol
+  // done 10/4/24, ping on reply in parser doesnt work so.....
+  // update 10/5/24 6.8.x doesnt ping but 6.9 does, nice
   {
-    name: "bal add",
+    name: "bal set",
+    aliases: ["setbal"],
     code: `
       $clientTyping
       $reply[$messageID;true]
-    
-    
-    
-      $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money;$mentioned[1];Bank];$noMentionMessage];$mentioned[1];Bank]
+      
+      $setGlobalUserVar[Money;$truncate[$noMentionMessage];$mentioned[1];Bank]
     
     
     
       $color[#80ff80]
       $title[
-        You have added $$noMentionMessage to $username[$mentioned[1]]'s money
+        You have set a user's balance!
       ]
       $description[
-        $username[$mentioned[1]] now has $$math[$getGlobalUserVar[Money;$mentioned[1];Bank]+$noMentionMessage]
+        The user $username[$mentioned[1]] now has $$numberSeparator[$truncate[$noMentionMessage]]
       ]
     
     
@@ -51,14 +50,14 @@ module.exports = [
         }
         {reply:$messageID:true}
       ]
-      $onlyIf[$mentionedUsersCount<=1;
+      $onlyIf[$isNumber[$noMentionMessage]==true;
         {newEmbed:
-          {title:Only mention one person!}
+          {title:Input a valid amount!}
           {color:#80ff80}
         }
         {reply:$messageID:true}
       ]
-      `,
+    `,
   },
 ];
 
