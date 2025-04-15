@@ -14,6 +14,8 @@ This command is still in development!
 \#coinflip
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 console.log("Hello World!")

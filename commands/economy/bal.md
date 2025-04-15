@@ -12,6 +12,8 @@ description: View a user's balance
 * (user) - optional
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [

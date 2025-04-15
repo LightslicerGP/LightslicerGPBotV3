@@ -10,6 +10,8 @@ description: Get your daily $1,000
 \#daily
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [

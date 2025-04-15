@@ -14,6 +14,8 @@ This command is still in development!
 \#work
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [

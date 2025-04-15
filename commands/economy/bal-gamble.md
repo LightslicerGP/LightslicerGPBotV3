@@ -5,7 +5,7 @@ description: Gamble your life savings away, forget the college fund :D
 # #bal gamble
 
 {% hint style="danger" %}
-This command is still in development! (probably for a while too, its complicated
+This command is still in development! (probably for a while too, its complicated)
 {% endhint %}
 
 ## Usage
@@ -15,6 +15,8 @@ This command is still in development! (probably for a while too, its complicated
 
 * \[amount] - required
 {% endhint %}
+
+## Code
 
 {% code title="Main" lineNumbers="true" fullWidth="false" %}
 ```javascript

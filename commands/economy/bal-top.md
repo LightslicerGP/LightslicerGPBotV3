@@ -10,6 +10,8 @@ description: See the top of the monetary leaderboard
 \#bal top
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [

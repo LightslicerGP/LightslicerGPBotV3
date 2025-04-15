@@ -13,6 +13,8 @@ description: Give money to another user
 * \[amount] - required
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [

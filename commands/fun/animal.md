@@ -7,11 +7,12 @@ description: Get a random info card for an animal!
 ## Usage
 
 {% hint style="success" %}
-\#command (option1) \[option2]
+\#command \[animal]
 
-* (option1) - optional
-* \[option2] - required
+* \[animal] - required
 {% endhint %}
+
+## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript

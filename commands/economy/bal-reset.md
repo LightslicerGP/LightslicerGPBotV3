@@ -17,6 +17,8 @@ This command is for admins only!
 * \[amount] - required
 {% endhint %}
 
+## Code
+
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
 ```javascript
 module.exports = [
