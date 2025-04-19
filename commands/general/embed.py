@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.ui import Button, View
 
 # mabye cleanup idk 10/1/24, done
-
+# 4/18/25 aoijs doesnt have url support in like $author and others, so ill wait to update these properly
 
 class Embed(commands.Cog):
     def __init__(self, bot):
