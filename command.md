@@ -29,6 +29,7 @@ console.log("Hello World!")
 ```
 {% endcode %}
 
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
 ```python
 print("Hello World!")
 ```
