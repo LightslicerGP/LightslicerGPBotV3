@@ -50,13 +50,13 @@ async def on_ready():
 
 
 async def load_commands():
-    for foldername in os.listdir("./Commands/"):
-        if os.path.isdir(f"./Commands/{foldername}"):
-            for filename in os.listdir(f"./Commands/{foldername}"):
+    for foldername in os.listdir("./commands/"):
+        if os.path.isdir(f"./commands/{foldername}"):
+            for filename in os.listdir(f"./commands/{foldername}"):
                 if filename.endswith(".py"):
-                    await bot.load_extension(f"Commands.{foldername}.{filename[:-3]}")
+                    await bot.load_extension(f"commands.{foldername}.{filename[:-3]}")
         elif foldername.endswith(".py"):
-            await bot.load_extension(f"Commands.{foldername[:-3]}")
+            await bot.load_extension(f"commands.{foldername[:-3]}")
 
 
 async def main():

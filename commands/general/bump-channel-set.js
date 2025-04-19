@@ -13,7 +13,7 @@ module.exports = [
       $color[#80bfff]
       $title[Bump Channel has been set!]
       $description[
-          Bump channel set to $message (\`$message\`)
+        Bump channel set to $message (\`$message\`)
       ]
 
       $onlyIf[$guildChannelExists[$guildID;$findChannel[$message;false]]==true;

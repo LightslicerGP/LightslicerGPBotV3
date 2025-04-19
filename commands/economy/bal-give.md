@@ -9,13 +9,14 @@ description: Give money to another user
 {% hint style="success" %}
 \#bal give \[user] \[amount]
 
-* \[user] - required
-* \[amount] - required
-{% endhint %}
+- \[user] - required
+- \[amount] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // broken
@@ -122,12 +123,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

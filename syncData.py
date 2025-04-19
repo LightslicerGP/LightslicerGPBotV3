@@ -93,59 +93,6 @@ def process(base_name):
             print("need to insert this line:")
             print(line_to_insert)
 
-        # in_right_broad_catagory = False
-        # in_right_catagory = False
-        # in_right_section = False
-
-        # for i, line in enumerate(lines):
-        #     # print(i, line)
-        #     # "  * [💵 Economy](commands/economy/README.md)"
-        #     catagory_title = re.match(
-        #         r"^\s{2}\*\s\[([^\]]+)\]\([^)]+\)$", line.strip("\n")
-        #     )
-        #     # "    * [#bal add](commands/economy/bal-add.md)"
-        #     command_title = re.match(
-        #         r"^\s{4}\*\s\[(.*?)\]\(([^)]+)\)$", line.strip("\n")
-        #     )
-
-        #     if not in_right_section:
-        #         if (
-        #             line.strip("\n") == "* [Commands](commands/README.md)"
-        #             and not in_right_broad_catagory
-        #         ):
-        #             in_right_broad_catagory = True
-        #         elif catagory_title and not in_right_catagory:
-        #             catagory_current = catagory_title.group(1)[2:].lower()
-        #             if catagory_current == catagory:
-        #                 in_right_catagory = True
-
-        #         if in_right_broad_catagory and in_right_catagory:
-        #             in_right_section = True
-        #     else:
-        #         if catagory_title:
-        #             print("end of catagory", i, catagory_title.group(1))
-        #             lines.insert(i, line_to_insert)
-        #             break
-        #         elif command_title:
-        #             current_command_name = command_title.group(1)
-        #             current_command_path = command_title.group(2)
-        #             if current_command_name == command_name:  # already exists in TOC
-        #                 print("line exists", i, current_command_name)
-        #                 lines[i] = line_to_insert
-        #                 break
-        #             else:
-        #                 print("comparing", i, current_command_name, "to", command_name)
-        #                 should = should_insert_before(
-        #                     current_command_name, command_name
-        #                 )
-        #                 print(should)
-        #                 if should:
-        #                     lines.insert(i, line_to_insert)
-        #                     break
-
-        # with io.open("SUMMARY.md", "w", encoding="utf-8") as f:
-        #     f.writelines(lines)
-
         with io.open(f"{base_name}.md", "r", encoding="utf-8") as file:
             content = file.read()
 

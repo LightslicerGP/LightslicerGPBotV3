@@ -13,13 +13,14 @@ This command is still in development!
 {% hint style="success" %}
 \#random (minimum) (maximum)
 
-* (minimum) - optional
-* (maximum) - optional
-{% endhint %}
+- (minimum) - optional
+- (maximum) - optional
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // if doesnt do functions only embeds or som
@@ -50,11 +51,12 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -86,4 +88,5 @@ async def setup(bot):
     await bot.add_cog(Random(bot))
 
 ```
+
 {% endcode %}

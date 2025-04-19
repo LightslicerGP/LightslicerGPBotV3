@@ -13,12 +13,13 @@ This command is still in development! (probably for a while too, its complicated
 {% hint style="success" %}
 \#bal gamble \[amount]
 
-* \[amount] - required
-{% endhint %}
+- \[amount] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="Main" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // just for stickman :)
@@ -92,11 +93,12 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
 {% code title="Second, to do." lineNumbers="true" %}
+
 ```javascript
 module.exports = [
   // started 10/6/24, addMessageReactions is broken in 6.8 and 6.9 soooo
@@ -268,10 +270,13 @@ module.exports = [
   },
 ];
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

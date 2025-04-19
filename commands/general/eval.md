@@ -17,12 +17,13 @@ This command is still in development!
 {% hint style="success" %}
 \#command \[code]
 
-* \[code] - required
-{% endhint %}
+- \[code] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done 10.5.24, made more barebones (no embed)
@@ -49,12 +50,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

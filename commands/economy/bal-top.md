@@ -13,6 +13,7 @@ description: See the top of the monetary leaderboard
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done ig? 10/5/24
@@ -45,12 +46,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

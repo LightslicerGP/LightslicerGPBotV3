@@ -13,6 +13,7 @@ description: Get a reminder of what version this bot is
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done 10/6/24
@@ -31,12 +32,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

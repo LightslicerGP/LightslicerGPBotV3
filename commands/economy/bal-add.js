@@ -6,13 +6,13 @@ module.exports = [
     code: `
       $clientTyping
       $reply[$messageID;true]
-    
-    
-    
+
+
+
       $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money;$mentioned[1];Bank];$noMentionMessage];$mentioned[1];Bank]
-    
-    
-    
+
+
+
       $color[#80ff80]
       $title[
         You have added $$noMentionMessage to $username[$mentioned[1]]'s money
@@ -20,9 +20,9 @@ module.exports = [
       $description[
         $username[$mentioned[1]] now has $$math[$getGlobalUserVar[Money;$mentioned[1];Bank]+$noMentionMessage]
       ]
-    
-    
-    
+
+
+
       $onlyForIDs[586225258269245538;883931596758081556;
         {newEmbed:
           {title:You're not LightslicerGP (nor an admin), and I (the bot) can't make you him sooo..... sorry I guess}

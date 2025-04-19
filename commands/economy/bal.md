@@ -9,12 +9,13 @@ description: View a user's balance
 {% hint style="success" %}
 \#bal (user)
 
-* (user) - optional
-{% endhint %}
+- (user) - optional
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done 10/4/24, ping on reply in parser doesnt work so.....
@@ -47,11 +48,12 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -85,4 +87,5 @@ async def setup(bot):
     await bot.add_cog(Bal(bot))
 
 ```
+
 {% endcode %}

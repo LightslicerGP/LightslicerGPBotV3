@@ -11,14 +11,15 @@ This command is still in development! (and temporary)
 ## Usage
 
 {% hint style="success" %}
-\#bal gamble2 \[amount] 
+\#bal gamble2 \[amount]
 
-* \[amount] - required
-{% endhint %}
+- \[amount] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // started 10/6/24, addMessageReactions is broken in 6.8 and 6.9 soooo
@@ -189,12 +190,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

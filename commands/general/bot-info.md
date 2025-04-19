@@ -17,6 +17,7 @@ This command is still in development!
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done yesterday/day before, might change idk 10/5/24
@@ -55,11 +56,12 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -140,4 +142,5 @@ async def setup(bot):
     await bot.add_cog(Bot_Info(bot))
 
 ```
+
 {% endcode %}

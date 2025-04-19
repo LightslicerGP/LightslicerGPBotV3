@@ -13,6 +13,7 @@ description: Get your daily $1,000
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // when doing this, doing #bal uses the mainsql not banksql, untill you do #baltop or #balset then it fixes????? - shouldve said fixed, 6/8/23, well its 6/9/23 now lol
@@ -48,12 +49,14 @@ module.exports = [
   `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

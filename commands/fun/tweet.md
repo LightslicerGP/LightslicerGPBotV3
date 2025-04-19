@@ -13,12 +13,13 @@ This command is still in development!
 {% hint style="success" %}
 \#tweet \[text]
 
-* \[text] - required
-{% endhint %}
+- \[text] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   {
@@ -53,11 +54,12 @@ module.exports = [
     `, //$log[https://some-random-api.ml/canvas/tweet?username=$username[$authorID]&displayname=$username[$authorID]&avatar=$replaceText[$authorAvatar;webp;png]&comment=$replaceText[$message; ;%20]]
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -101,4 +103,5 @@ async def setup(bot):
     await bot.add_cog(Tweet(bot))
 
 ```
+
 {% endcode %}

@@ -9,12 +9,13 @@ description: Talk to an ai bot
 {% hint style="success" %}
 \#chat \[text]
 
-* \[text] - required
-{% endhint %}
+- \[text] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // 9/30/24 doing anything but hi or hello doesnt work lol, api is broken
@@ -50,15 +51,16 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
 {% hint style="danger" %}
 This command is still in development!
 {% endhint %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -101,4 +103,5 @@ async def setup(bot):
     await bot.add_cog(Chat(bot))
 
 ```
+
 {% endcode %}

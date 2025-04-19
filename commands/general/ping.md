@@ -13,6 +13,7 @@ description: Get the ping to the bot
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done since like a week ago 10/5/24
@@ -34,11 +35,12 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -69,4 +71,5 @@ async def setup(bot):
     await bot.add_cog(Ping(bot))
 
 ```
+
 {% endcode %}

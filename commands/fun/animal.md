@@ -9,12 +9,13 @@ description: Get a random info card for an animal!
 {% hint style="success" %}
 \#command \[animal]
 
-* \[animal] - required
-{% endhint %}
+- \[animal] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done 9/30/24
@@ -206,15 +207,16 @@ List of animals you can do:
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
 {% hint style="danger" %}
 This command is still in development!
 {% endhint %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -256,4 +258,5 @@ async def setup(bot):
     await bot.add_cog(Animal(bot))
 
 ```
+
 {% endcode %}

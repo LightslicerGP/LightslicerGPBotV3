@@ -1,3 +1,26 @@
+---
+description: Do some math calculation
+---
+
+# #calc
+
+## Usage
+
+{% hint style="success" %}
+\#calc \[option2]
+
+- \[equation] - required
+  {% endhint %}
+
+## Code
+
+{% hint style="warning" %}
+| means OR, & means AND, ^ means XOR, implied multiplication doesnt work
+{% endhint %}
+
+{% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
+```javascript
 module.exports = [
   // DONT GET RID OF INDEX!!!!!
   // Done 4/18/25
@@ -32,3 +55,14 @@ implied multiplication doesnt work
       `,
   },
 ];
+```
+
+{% endcode %}
+
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
+```python
+print("Hello World!")
+```
+
+{% endcode %}

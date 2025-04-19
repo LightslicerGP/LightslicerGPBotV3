@@ -13,12 +13,13 @@ This command is still in development!
 {% hint style="success" %}
 \#job apply \[job]
 
-* \[job] - required
-{% endhint %}
+- \[job] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // started 10/10/24
@@ -48,12 +49,14 @@ module.exports = [
       `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

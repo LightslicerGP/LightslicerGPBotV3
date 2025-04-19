@@ -17,12 +17,15 @@ This command is still in development!
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
-console.log("Hello World!")
+console.log("Hello World!");
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 import discord
 from discord.ext import commands
@@ -60,4 +63,5 @@ async def setup(bot):
     await bot.add_cog(Coinflip(bot))
 
 ```
+
 {% endcode %}

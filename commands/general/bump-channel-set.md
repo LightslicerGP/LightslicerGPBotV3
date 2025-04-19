@@ -1,5 +1,5 @@
 ---
-description: Set the channel for the Bump reminder
+description: Set the channel for the bump reminder
 ---
 
 # #bump channel set
@@ -17,12 +17,13 @@ This command is still in development!
 {% hint style="success" %}
 \#bump channel set (channel)
 
-* \[channel] - required
-{% endhint %}
+- \[channel] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // Done 4/18/25
@@ -39,7 +40,7 @@ module.exports = [
       $color[#80bfff]
       $title[Bump Channel has been set!]
       $description[
-          Bump channel set to $message (\`$message\`)
+        Bump channel set to $message (\`$message\`)
       ]
 
       $onlyIf[$guildChannelExists[$guildID;$findChannel[$message;false]]==true;
@@ -52,12 +53,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

@@ -13,13 +13,14 @@ This command is still in development!
 {% hint style="success" %}
 \#command (option1) \[option2]
 
-* (option1) - optional
-* \[option2] - required
-{% endhint %}
+- (option1) - optional
+- \[option2] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = {
   // done 10/6/24 thanks to ripplex07, i slightly modified it
@@ -115,12 +116,14 @@ module.exports = {
     $let[user;$findUser[$message;true]]
   `,
 };
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}

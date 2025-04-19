@@ -13,13 +13,14 @@ This command is for admins only!
 {% hint style="success" %}
 \#bal reset (user) \[amount]
 
-* (user) - optional
-* \[amount] - required
-{% endhint %}
+- (user) - optional
+- \[amount] - required
+  {% endhint %}
 
 ## Code
 
 {% code title="AOI.js" lineNumbers="true" fullWidth="false" %}
+
 ```javascript
 module.exports = [
   // done 10/5/24
@@ -63,12 +64,14 @@ module.exports = [
     `,
   },
 ];
-
 ```
+
 {% endcode %}
 
-{% code title="Discord.py" lineNumbers="true" %}
+{% code title="Discord.py" lineNumbers="true" fullWidth="false" %}
+
 ```python
 print("Hello World!")
 ```
+
 {% endcode %}
