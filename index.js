@@ -131,6 +131,10 @@ bot.command({
 
 bot.variables(
   {
+    DisboardBumpChannel: "",
+  },
+  "main",
+  {
     Money: 0,
   },
   "Bank"

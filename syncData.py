@@ -75,26 +75,24 @@ def process(base_name):
         markdown_path = base_name.replace("\\", "/") + ".md"
         # "    * [#bal add](commands/economy/bal-add.md)\n"
         # line_to_insert = f"    * [{command_name}]({markdown_path})\n"
-        line_to_insert = f"[{command_name}]({markdown_path})\n"
-        
+        line_to_insert = f"    * [{command_name}]({markdown_path})\n"
 
         with io.open("SUMMARY.md", "r", encoding="utf-8") as summary_file:
             lines = summary_file.readlines()
 
         line_exists = False
-        
+
         for line in lines:
             if not line_exists:
                 if line == line_to_insert:
                     # print("line exists")
                     line_exists = True
                     break
-                
+
         if not line_exists:
             print("need to insert this line:")
             print(line_to_insert)
-            
-        
+
         # in_right_broad_catagory = False
         # in_right_catagory = False
         # in_right_section = False
