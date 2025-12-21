@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/*.js": true,
+    "**/__init__.py": true,
+    "commands/**/*.md": true,
+    ".gitbook": true,
+    "Database": true,
+    "syncData.py": true,
+    "config.json": true,
+    // ".vscode": true,
+
+    // "*.md": true, 
+    "command.md": true,
+    "README.md": true,
+    "SUMMARY.md": true
+  }
+}

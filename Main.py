@@ -2,24 +2,25 @@ import discord
 from discord.ext import commands
 import json
 import os
-import asyncio
 
-with open("config.json", "r") as config_file:
-    config = json.load(config_file)
-    token = config["token"]
-    api_token = config["apiToken"]
+with open("config.json", "r") as f:
+    config = json.load(f)
+
+TOKEN = config["token"]
 
 intents = discord.Intents.default()
 intents.message_content = True
-intents.all
-bot = commands.Bot(command_prefix="#", intents=intents)
+
+bot = commands.Bot(command_prefix="#", intents=intents, help_command=None)
+
+RESTART_STATE_FILE = "restart_state.json"
 
 
-@bot.command(name="test")
-async def command(ctx, arg1, arg2="DEFAULT"):
-    async with ctx.typing():
-        content = f"arg1: {arg1}, arg2: {arg2}"
-    await ctx.reply(content)
+# @bot.command(name="test")
+# async def command(ctx, arg1, arg2="DEFAULT"):
+#     async with ctx.typing():
+#         content = f"arg1: {arg1}, arg2: {arg2}"
+#     await ctx.reply(content)
 
 
 @bot.command(name="sample")
@@ -40,28 +41,55 @@ async def command(ctx, arg1="samplearg"):
 
 @bot.event
 async def on_ready():
-    print(f"Logged in as {bot.user}!")
-    await bot.change_presence(
-        status=discord.Status.online,
-        activity=discord.Game(
-            name=f"On {bot.guilds} servers, and made by LightslicerGP#2125, prefix is #"
-        ),
-    )
+    print(f"Logged in as {bot.user}")
+
+    if not os.path.exists(RESTART_STATE_FILE):
+        return
+
+    try:
+        with open(RESTART_STATE_FILE, "r") as f:
+            data = json.load(f)
+
+        channel = bot.get_channel(data["channel_id"])
+        if not channel:
+            return
+
+        message = await channel.fetch_message(data["message_id"])
+
+        embed = discord.Embed(
+            title="Bot Restarted",
+            description="The bot has restarted successfully.",
+            color=discord.Color(0xFFFFFF),
+        )
+
+        await message.edit(embed=embed)
+
+    except Exception as e:
+        print("Failed to edit restart message:", e)
+
+    finally:
+        os.remove(RESTART_STATE_FILE)
 
 
 async def load_commands():
-    for foldername in os.listdir("./commands/"):
-        if os.path.isdir(f"./commands/{foldername}"):
-            for filename in os.listdir(f"./commands/{foldername}"):
-                if filename.endswith(".py"):
-                    await bot.load_extension(f"commands.{foldername}.{filename[:-3]}")
-        elif foldername.endswith(".py"):
-            await bot.load_extension(f"commands.{foldername[:-3]}")
+    for folder in os.listdir("./commands"):
+        folder_path = f"./commands/{folder}"
+
+        if os.path.isdir(folder_path):
+            for file in os.listdir(folder_path):
+                file_path = os.path.join(folder_path, file)
+                if (
+                    file.endswith(".py")
+                    and file != "__init__.py"
+                    and os.path.getsize(file_path) > 0
+                ):
+                    ext = f"commands.{folder}.{file[:-3]}"
+                    await bot.load_extension(ext)
 
 
-async def main():
+@bot.event
+async def setup_hook():
     await load_commands()
-    await bot.start(token)
 
 
-asyncio.run(main())
+bot.run(TOKEN)

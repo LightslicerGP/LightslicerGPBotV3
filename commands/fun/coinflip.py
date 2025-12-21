@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 
 # done 10/1/24
+# done again 12/15/25
 
 
 class Coinflip(commands.Cog):
@@ -10,21 +11,25 @@ class Coinflip(commands.Cog):
         self.bot = bot
 
     @commands.command(name="coinflip", aliases=["flip"])
-    async def command(self, ctx):
+    async def coinflip(self, ctx):
         async with ctx.typing():
+            roll = random.randint(1, 1001)
 
-            result = random.randint(1, 1001)
-            if result == 1:
-                description = "***The coin somehow landed on its edge i dont know how i dont make the rules and i cant manipulate an RNG for it to do so but somehow you managed a 1/1001 chance of getting this, feel proud!***"
-            elif result <= 501:
+            if roll == 1:
+                description = (
+                    "***The coin somehow landed on its edge. "
+                    "I don’t know how. I don’t make the rules. "
+                    "You just hit a 1/1001 chance. Be proud.***"
+                )
+            elif roll <= 501:
                 description = "Heads"
             else:
                 description = "Tails"
 
             embed = discord.Embed(
-                title="And you flipped...",
+                title="And you flipped…",
                 description=description,
-                color=discord.Color(0xFFFF80),
+                color=discord.Color(0x80BFFF),
             )
 
         await ctx.reply(embed=embed)

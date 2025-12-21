@@ -4,15 +4,16 @@ from discord.ui import Button, View
 
 # mabye cleanup idk 10/1/24, done
 # 4/18/25 aoijs doesnt have url support in like $author and others, so ill wait to update these properly
+# done 12/15/25
+
 
 class Embed(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command(name="embed")
-    async def command(self, ctx):
+    async def embed(self, ctx):
         async with ctx.typing():
-
             embed = (
                 discord.Embed(
                     title="TitleTextGoesHere",
@@ -54,68 +55,70 @@ class Embed(commands.Cog):
 
             view = View()
 
-            button_primary = Button(
-                label="label", style=discord.ButtonStyle.primary, row=1
+            # Enabled buttons
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.link,
+                    url="https://lightslicergp.gitbook.io/lightslicergpbotv3/",
+                    row=1,
+                )
             )
-            button_secondary = Button(
-                label="label", style=discord.ButtonStyle.secondary, row=1
+            view.add_item(
+                Button(label="label", style=discord.ButtonStyle.danger, row=1)
             )
-            button_success = Button(
-                label="label", style=discord.ButtonStyle.success, row=1
+            view.add_item(
+                Button(label="label", style=discord.ButtonStyle.success, row=1)
             )
-            button_danger = Button(
-                label="label", style=discord.ButtonStyle.danger, row=1
+            view.add_item(
+                Button(label="label", style=discord.ButtonStyle.secondary, row=1)
             )
-            button_link = Button(
-                label="label",
-                style=discord.ButtonStyle.link,
-                url="https://lightslicergp.gitbook.io/lightslicergpbotv3/",
-                row=1,
-            )
-
-            button_primary_disabled = Button(
-                label="label",
-                style=discord.ButtonStyle.primary,
-                disabled=True,
-                row=2,
-            )
-            button_secondary_disabled = Button(
-                label="label",
-                style=discord.ButtonStyle.secondary,
-                disabled=True,
-                row=2,
-            )
-            button_success_disabled = Button(
-                label="label",
-                style=discord.ButtonStyle.success,
-                disabled=True,
-                row=2,
-            )
-            button_danger_disabled = Button(
-                label="label",
-                style=discord.ButtonStyle.danger,
-                disabled=True,
-                row=2,
-            )
-            button_link_disabled = Button(
-                label="label",
-                style=discord.ButtonStyle.link,
-                url="https://lightslicergp.gitbook.io/lightslicergpbotv3/",
-                disabled=True,
-                row=2,
+            view.add_item(
+                Button(label="label", style=discord.ButtonStyle.primary, row=1)
             )
 
-            view.add_item(button_link)
-            view.add_item(button_danger)
-            view.add_item(button_success)
-            view.add_item(button_secondary)
-            view.add_item(button_primary)
-
-            view.add_item(button_link_disabled)
-            view.add_item(button_danger_disabled)
-            view.add_item(button_success_disabled)
-            view.add_item(button_secondary_disabled)
-            view.add_item(button_primary_disabled)
+            # Disabled buttons
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.link,
+                    url="https://lightslicergp.gitbook.io/lightslicergpbotv3/",
+                    disabled=True,
+                    row=2,
+                )
+            )
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.danger,
+                    disabled=True,
+                    row=2,
+                )
+            )
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.success,
+                    disabled=True,
+                    row=2,
+                )
+            )
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.secondary,
+                    disabled=True,
+                    row=2,
+                )
+            )
+            view.add_item(
+                Button(
+                    label="label",
+                    style=discord.ButtonStyle.primary,
+                    disabled=True,
+                    row=2,
+                )
+            )
 
         await ctx.reply(embed=embed, view=view)
 

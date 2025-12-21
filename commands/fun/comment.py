@@ -2,23 +2,20 @@ import discord
 from discord.ext import commands
 import urllib.parse
 
-# 10/1/24 technically done, but api supports custom counts
-# and theme, add that as like --theme=dark or whatever idk
-# check for parity with the aoijs version 4/5/25
-# done again, with dark mode permenanttly lol 12/15/25
+# done 12/15/25
 
 
-class Tweet(commands.Cog):
+class Comment(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="tweet")
-    async def tweet(self, ctx, *, message: str = None):
+    @commands.command(name="comment")
+    async def comment(self, ctx, *, message: str = None):
         if not message:
             await ctx.reply(
                 embed=discord.Embed(
                     title="Missing Text",
-                    description="Please include some text to put in the tweet!",
+                    description="Please include some text to put in the comment!",
                     color=discord.Color(0xFFFF80),
                 )
             )
@@ -27,21 +24,18 @@ class Tweet(commands.Cog):
         async with ctx.typing():
             user = ctx.author
             username = urllib.parse.quote_plus(user.name[:15])
-            displayname = urllib.parse.quote_plus(user.display_name)
             avatar = urllib.parse.quote_plus(user.display_avatar.url)
             comment = urllib.parse.quote_plus(message)
 
             url = (
-                "https://api.some-random-api.com/canvas/tweet"
+                "https://api.some-random-api.com/canvas/misc/youtube-comment"
                 f"?username={username}"
-                f"&displayname={displayname}"
                 f"&avatar={avatar}"
                 f"&comment={comment}"
-                f"&theme=dark"
             )
 
             embed = discord.Embed(
-                title="Here is your tweet",
+                title="Here is your comment",
                 description="Enjoy!",
                 color=discord.Color(0xFFFF80),
             ).set_image(url=url)
@@ -50,4 +44,4 @@ class Tweet(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Tweet(bot))
+    await bot.add_cog(Comment(bot))

@@ -3,22 +3,27 @@ from discord.ext import commands
 import io
 
 # done 10/2/24
+# done again 12/15/25
 
 
 class Banlist(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="banlist")
-    async def command(self, ctx):
+    @commands.command(
+        name="banlist",
+        aliases=["banned"],
+        help="Shows a list of all banned users in this server.",
+        description="Displays the server's ban list, including user IDs and reasons if available.",
+    )
+    async def banlist(self, ctx):
         async with ctx.typing():
-
             ban_list = []
-            id_list = []
+            file_lines = []
 
             async for entry in ctx.guild.bans():
                 ban_list.append(f"{entry.user} `({entry.user.id})` - {entry.reason}")
-                id_list.append(f"{entry.user.id}")
+                file_lines.append(f"{entry.user.id} - {entry.user} - {entry.reason}")
 
             embed = discord.Embed(
                 title="Banned Users",
@@ -29,7 +34,7 @@ class Banlist(commands.Cog):
             )
 
             file = discord.File(
-                io.StringIO("\n".join(id_list)), filename="banned_ids.txt"
+                io.StringIO("\n".join(file_lines)), filename="banned_users.txt"
             )
 
         await ctx.reply(embed=embed, file=file)

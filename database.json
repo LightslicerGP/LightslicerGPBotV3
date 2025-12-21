@@ -1,0 +1,55 @@
+{
+  "Money": {
+    "586225258269245538": 12321321317390.1,
+    "978302436550774784": 123456.15,
+    "762007539197411350": 200.17,
+    "716159538717261946": -12381290609.0
+  },
+  "Daily": {
+    "123456789012345678": 1699999999,
+    "586225258269245538": 1765868729
+  },
+  "Job": {
+    "586225258269245538": [
+      {
+        "job": "Teacher",
+        "raise": 0
+      },
+      {
+        "job": "Fast Food Worker",
+        "raise": 0.8
+      },
+      {
+        "job": "Chief Executive Officer",
+        "raise": 0.15
+      }
+    ]
+  },
+  "Profile": {
+    "586225258269245538": {
+      "Bio": "Hello human! I love coding.\n-**Pronouns:** he/him\n-**Sexuality:** why would you care, but im straight\n-**Coding skills:** making your mom in minecra-",
+      "Birthday": {
+        "Month": "June",
+        "Day": 8,
+        "Year": null
+      },
+      "Interests": "Testing",
+      "YouTube": "https://www.youtube.com/c/lightslicergp",
+      "Site": "https://lightslicergp.github.io/Website-Beta"
+    },
+    "716159538717261946": {
+      "Bio": "I am a nice person. trust",
+      "Birthday": {
+        "Month": "February",
+        "Day": 20,
+        "Year": null
+      }
+    }
+  },
+  "BumpChannel": {
+    "586543238589054997": "652284238938505226"
+  },
+  "BumpRole": {
+    "586543238589054997": "972600952655872120"
+  }
+}
